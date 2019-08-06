@@ -373,7 +373,7 @@ class DDEXParser(Base):
                 process_xml['deal'] = self.process_deal_list(child)
             if child.tag == "UpdateIndicator":
                 process_xml['UpdateIndicator'] =child.text
-        print(json.dumps(process_xml,indent=4, sort_keys=True))
+        print(json.dumps(process_xml, ensure_ascii=False, indent=4, sort_keys=True))
 
 args = {"xmlpath":"A10301A00041017971.xml","debug":"DEBUG"}
 ddex = DDEXParser(args)
